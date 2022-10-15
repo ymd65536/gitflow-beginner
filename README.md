@@ -72,6 +72,23 @@ Now, start committing on your feature. When done, use:
 
 `feature/test`ブランチが`develop`をベースに作成されます。
 
+`git branch`で`branch`の一覧を表示します。
+
+```bash
+git branch
+```
+
+コマンドを実行すると以下のように実行結果が出力されます。
+作業用ブランチの`feature/test`が作成されていることを確認します。
+
+```txt
+  develop
+* feature/test
+  main
+```
+
+## 作業ブランチを develop にマージする
+
 `test`ブランチの作業を完了する場合は以下のコマンドを実行します。
 
 ```bash
