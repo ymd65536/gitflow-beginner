@@ -46,3 +46,5 @@ fatal: Working tree contains unstaged changes. Aborting.
 |Hotfix branches?|hotfix/|hotfix||
 |Support branches?|support/|support||
 |Version tag prefix?|tag|tag|
+
+## git-flow をテストする
