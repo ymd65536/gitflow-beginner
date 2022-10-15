@@ -77,3 +77,21 @@ Now, start committing on your feature. When done, use:
 ```bash
 git flow feature finish test
 ```
+
+コマンドを実行すると以下のように実行結果が出力されます。
+
+```txt
+Switched to branch 'develop'
+Updating 74c9ab8..20e9cd7
+Fast-forward
+ README.md | 29 +++++++++++++++++++++++++++++
+ 1 file changed, 29 insertions(+)
+Deleted branch feature/test (was 20e9cd7).
+
+Summary of actions:
+- The feature branch 'feature/test' was merged into 'develop'
+- Feature branch 'feature/test' has been removed
+- You are now on branch 'develop'
+```
+
+作業ブランチを完了するとdevelopブランチにスイッチして作業ブランチを自動で削除します。
