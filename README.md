@@ -101,7 +101,7 @@ git branch
 git flow feature publish test
 ```
 
-`push` で処理をする場合は以下のコマンドを実行します。
+`publish`実行後は`push` でGitHub上の作業ブランチを更新します。以下のコマンドを実行します。
 
 ```bash
 git push origin feature/test
