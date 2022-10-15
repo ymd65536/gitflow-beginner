@@ -48,3 +48,32 @@ fatal: Working tree contains unstaged changes. Aborting.
 |Version tag prefix?|tag|tag|
 
 ## git-flow をテストする
+
+セットアップが完了したことを確認する為に `feature`の`test`ブランチを切ります。
+以下のコマンドを実行します。
+
+```bash
+git flow feature start test
+```
+
+コマンドを実行すると以下のように実行結果が出力されます。
+
+```txt
+Switched to a new branch 'feature/test'
+
+Summary of actions:
+- A new branch 'feature/test' was created, based on 'develop'
+- You are now on branch 'feature/test'
+
+Now, start committing on your feature. When done, use:
+
+     git flow feature finish test
+```
+
+`feature/test`ブランチが`develop`をベースに作成されます。
+
+`test`ブランチの作業を完了する場合は以下のコマンドを実行します。
+
+```bash
+git flow feature finish test
+```
