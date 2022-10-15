@@ -87,13 +87,19 @@ git branch
   main
 ```
 
-## GitHubに作業ブランチをpushする
+## GitHubに作業ブランチを publishする
 
 作業ブランチをローカル上の`develop`でマージせず、GitHub上でマージする場合は  
-`git flow feature finish`ではなく`git push origin`を実行します。
+`git flow feature finish`ではなく`git flow feature publish`を実行します。
 
 `git flow feature finish`では`develop`に作業ブランチ`feature/test`をマージする為  
-GitHubでプルリクエストを作成してレビューする場合は`git push origin`を実行します。
+GitHubでプルリクエストを作成してレビューする場合は`git flow feature publish`を実行します。
+
+```bash
+git flow feature publish test
+```
+
+`push` で処理をする場合は以下のコマンドを実行します。
 
 ```bash
 git push origin feature/test
