@@ -87,9 +87,33 @@ git branch
   main
 ```
 
-## 作業ブランチを develop にマージする
+## GitHubに作業ブランチを publishする
 
-`test`ブランチの作業を完了する場合は以下のコマンドを実行します。
+作業ブランチをローカル上の`develop`でマージせず、GitHub上でマージする場合は  
+`git flow feature finish`ではなく`git flow feature publish`を実行します。
+
+`git flow feature finish`では`develop`に作業ブランチ`feature/test`をマージします。  
+
+`git flow feature finish`を実行してしまうと作業ブランチは削除されてしまい、GitHub上で`develop`ブランチとの差分比較ができません。
+ゆえに、GitHubでプルリクエストを作成してレビューする場合は`git flow feature publish`を実行して作業ブランチをGitHub上にpushする必要があります。
+
+```bash
+git flow feature publish test
+```
+
+`push` で処理をする場合は以下のコマンドを実行します。
+
+```bash
+git push origin feature/test
+```
+
+GitHub 上でマージ作業を完了する場合は以降のコマンドは利用しません。  
+ローカル上で`develop`ブランチの作業を実行したい場合はローカル上で作業ブランチを`develop`ブランチにマージする必要があります。
+
+## 作業ブランチを developブランチ にマージする
+
+ローカル上で`develop`ブランチと作業ブランチ`feature/test`をマージする場合は以下のコマンドを実行します。
+※このコマンドの実行によって、作業ブランチが`develop`にマージされます。**作業ブランチは削除されます。**
 
 ```bash
 git flow feature finish test
@@ -111,4 +135,10 @@ Summary of actions:
 - You are now on branch 'develop'
 ```
 
-作業ブランチを完了するとdevelopブランチにスイッチして作業ブランチを自動で削除します。
+## developブランチをリモートリポジトリにpushする
+
+リモートリポジトリにブランチをpushします。以下のコマンドを実行します。
+
+```bash
+git push origin develop
+ ```
