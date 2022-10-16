@@ -47,6 +47,19 @@ fatal: Working tree contains unstaged changes. Aborting.
 |Support branches?|support/|support||
 |Version tag prefix?|tag|tag|
 
+## 動作確認用のGitリポジトリをクローンする
+
+`git-flow`を実行するリポジトリを用意します。
+この時に利用するリポジトリはテストで使用しても良い自分のリポジトリであれば、なんでも構いません。
+
+ここでは`gitflow-beginner`のリモートリポジトリを利用します。
+以下のコマンドを実行します。
+
+```bash
+git clone https://github.com/ymd65536/gitflow-beginner.git
+cd gitflow-beginner
+```
+
 ## git-flow をテストする
 
 セットアップが完了したことを確認する為に `feature`の`test`ブランチを切ります。
