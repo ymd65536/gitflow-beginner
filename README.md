@@ -47,6 +47,19 @@ fatal: Working tree contains unstaged changes. Aborting.
 |Support branches?|support/|support||
 |Version tag prefix?|tag|tag|
 
+## 動作確認用のGitリポジトリをクローンする
+
+`git-flow`を実行するリポジトリを用意します。
+この時に利用するリポジトリはテストで使用しても良い自分のリポジトリであれば、なんでも構いません。
+
+ここでは`gitflow-beginner`のリモートリポジトリを利用します。
+以下のコマンドを実行します。
+
+```bash
+git clone https://github.com/ymd65536/gitflow-beginner.git
+cd gitflow-beginner
+```
+
 ## git-flow をテストする
 
 セットアップが完了したことを確認する為に `feature`の`test`ブランチを切ります。
@@ -142,3 +155,17 @@ Summary of actions:
 ```bash
 git push origin develop
  ```
+
+## Tips
+
+### Gitの基本
+
+|コマンド|説明|
+|:---|:---|
+|git init|リポジトリを初期化する|
+|git add|リポジトリ内にある変更をステージングする|
+|git commit -m "コメント"|ステージングされた変更を`コメント付き`でブランチに適用する|
+|git checkout -b <ブランチ名>|指定した名前でブランチを切る|
+|git checkout <ブランチ名>|指定したブランチ名でブランチを切り替える|
+|git branch -d <ブランチ名>|ブランチを削除する|
+|git pull origin <リモートブランチ>:<ローカルブランチ>|リモートリポジトリに存在するブランチの変更を取得し、指定のローカルブランチに反映する|
